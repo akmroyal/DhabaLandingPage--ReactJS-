@@ -1,38 +1,314 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+    --red: #d01c28;
+    --gray: #2e2e2e;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+* {
+    margin: 0;
+    overflow: hidden;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body {
+    font-family: "Poppins", sans-serif;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.navBtn {
+    all: unset;
+    padding: 6px 16px;
+    background: var(--red);
+    height: 32px;
+    color: white;
+    font-weight: 500;
+    position: relative;
+    right: 10vw;
 }
 
-.App-link {
-  color: #61dafb;
+.navContainer {
+    margin: 0 auto;
+    width: 100%;
+    background-color: #FE9E0D;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+nav {
+    display: flex;
+    justify-content: space-between;
+    height: 72px;
+    align-items: center;
+    background-color: transparent;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 24px;
+}
+
+nav ul li {
+    font-size: 1.2rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.hero {
+    display: flex;
+    align-items: center;
+    height: calc(100vh - 72px);
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+    margin-top: 6vw;
+}
+
+.hero h1 {
+    font-weight: 800;
+    line-height: 102px;
+    font-size: 5.2rem;
+    width: 79vw;
+    height: 48vh;
+}
+
+.hero p {
+    font-weight: 600;
+    color: var(--gray);
+    max-width: 400px;
+    text-transform: uppercase;
+}
+
+.hero-btn {
+    display: flex;
+    gap: 40px;
+}
+
+.hero-btn button {
+    font-size: 24px;
+}
+
+.secondary-btn {
+    background: transparent;
+    color: var(--gray);
+    border: 1px solid gray;
+}
+
+.shopping p {
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.brand-icons {
+    display: flex;
+    gap: 16px;
+}
+
+/* ----------------- */
+
+.posterImage {
+    z-index: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 40vw;
+}
+
+.hero-image {
+    width: 44vw;
+    height: auto;
+    position: relative;
+}
+
+.homeFood {
+    width: 28vw;
+    position: relative;
+    left: -4vw;
+    bottom: -4vw;
+}
+
+.orderBtn {
+    display: flex;
+    padding: 0.3rem 3.1rem;
+    justify-content: center;
+    align-items: center;
+    gap: 1.25rem;
+    color: #fff;
+    border-radius: 6.25rem;
+    background: #FE9E0D;
+    font-weight: 600;
+}
+
+/* -------------About Sec */
+.aboutNav,
+.contactNav {
+    display: flex;
+    justify-content: center;
+}
+
+.aboutPoster {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 22vw;
+    z-index: 0;
+    height: 104vh;
+}
+
+.aboutContainer {
+    width: 40vw;
+    height: auto;
+    background-color: transparent;
+    display: flex;
+    position: absolute;
+    left: 3vw;
+    top: 9vw;
+}
+
+.aboutTextCont {
+    width: 40vw;
+    height: 70vh;
+    /* background-color: #2e2e2e; */
+    display: flex;
+    position: absolute;
+    right: 2vw;
+    top: 9vw;
+    flex-direction: column;
+    gap: 2.4vw;
+}
+
+.aboutTextCont h1 {
+    font-weight: 700;
+    font-size: 2.5rem;
+    color: #FE9E0D;
+    cursor: pointer;
+
+}
+
+.aboutTextCont h2 {
+    font-weight: 600;
+    color: #4C4C4C;
+}
+
+.aboutBtn {
+    width: 10vw;
+    height: 6vh;
+    border-radius: 20px;
+    color: #4C4C4C;
+    background-color: #FE9E0D;
+    transition: all ease-in 0.12s;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+.aboutBtn:hover {
+    background-color: #db8708f0;
+    color: #2e2e2e;
+}
+
+/* ----------Contact Section------- */
+.footerContact {
+    width: 100%;
+    height: 45vh;
+    background-color: #f9f9f9;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-inline-start: 4vw;
+}
+
+
+.linkContact {
+    display: flex;
+    width: 60vw;
+    background-color: transparent;
+}
+.linkContact ul{
+    /* gap: 3vw; */
+    line-height: 3vw;
+}
+.linkContact ul li{
+    font-size: 1.2rem;
+    cursor: pointer;
+    font-weight: 600;
+    color: #4C4C4C;
+}
+.bodyContact{
+    position: relative;
+    
+}
+.emailContact{
+    width: 30vw;
+}
+.btnContact{
+    color: #fff;
+    background-color: #FE9E0D;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: all ease-in 0.12s;
+}
+.btnContact:hover{
+    background-color: #ed9106d1;
+    
+}
+.logoName{
+    color: #FE9E0D;
+    font-size: 3rem;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+/* -------Testinmonial--------- */
+.textTestCont{
+    position: relative;
+    /* top: 5vw; */
+    width: 75%;
+    height: auto;
+    padding: 2.5vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    gap: 1vw;
+}
+.textTestCont h2{
+    color: #FE9E0D;
+    font-weight: 600;
+    cursor: pointer;
+}
+.textTestCont h1{
+    font-weight: 700;
+    font-size: 3.1rem;
+}
+.textTestCont h6{
+    width: 44vw;
+    height: auto;
+    text-align: center;
+    color: #4C4C4C;
+}
+.testCard{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.testerImage{
+    width: 8.5vw;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.testName{
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #4C4C4C;
+    cursor: pointer;
 }

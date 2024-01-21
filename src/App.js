@@ -1,25 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+// import FontExPeriment from './Component/FontExPeriment'
+import './App.css'
+import MainPage from "./Component/CoverPage/MainPage"
+import { Routes, Route } from 'react-router-dom';
+import About from './Component/CoverPage/About'
+import Contact from './Component/CoverPage/Contact';
+import Testimonial from './Component/CoverPage/Testimonial';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <>
+            {/* <FontExPeriment/> */}
+            {/* Here we Builded a fontExperiment little project :*/}
+
+            {/* ------------------------------------------------------------------------------- */}
+            <Routes>
+                <Route path='/' element={<MainPage />} />
+                <Route path='about' element={<About />} />
+                <Route path='testimonial' element={<Testimonial />} />
+                <Route path='contact' element={<Contact />} />
+            </Routes>
+            {/* Landing Page of Resturant */}
+
+
+        </>
+    )
 }
 
-export default App;
+export default App
+
